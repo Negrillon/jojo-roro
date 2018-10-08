@@ -7,6 +7,8 @@ package mysokoban.fx;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.io.*;
+
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.event.ActionEvent;
@@ -14,6 +16,9 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import mysokoban.fx.core.Level;
+import mysokoban.fx.output.ConsoleOutput;
+
 import javax.swing.JApplet;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
@@ -55,6 +60,19 @@ public class MySokobanFX extends JApplet {
                 frame.setVisible(true);
                 
                 applet.start();
+
+
+                //Test affichage level
+
+                Level lvl1 = new Level();
+
+                lvl1.loadLevel("C:\\Users\\RC\\Documents\\jojo-roro\\MySokoban FX\\src\\ressource\\map_01");
+                new ConsoleOutput().ConsoleMapDispay(lvl1);
+
+
+
+
+
             }
         });
     }
