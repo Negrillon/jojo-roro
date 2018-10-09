@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="152ce18a-7de4-4484-ae9a-803f7766c8da" name="Default Changelist" comment="" />
+    <list default="true" id="152ce18a-7de4-4484-ae9a-803f7766c8da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MySokoban FX/src/mysokoban/fx/core/Level.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySokoban FX/src/mysokoban/fx/output/ConsoleOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySokoban FX/src/ressource/map_01" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySokoban FX/src/ressource/map_02" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySokoban FX/src/mysokoban/fx/MySokobanFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/MySokoban FX/src/mysokoban/fx/MySokobanFX.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/MySokoban FX/src/mysokoban/fx/MySokobanFX.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="915">
-              <caret line="79" column="56" selection-start-line="79" selection-start-column="56" selection-end-line="79" selection-end-column="56" />
+              <caret line="97" column="56" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -57,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/MySokoban FX/src/output/Display.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -194,12 +201,12 @@
       <workItem from="1538636292189" duration="2088000" />
       <workItem from="1538639585584" duration="1005000" />
       <workItem from="1539010354005" duration="701000" />
-      <workItem from="1539092104433" duration="177000" />
+      <workItem from="1539092104433" duration="285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3971000" />
+    <option name="totallyTimeSpent" value="4079000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -255,14 +262,14 @@
     <entry file="file://$PROJECT_DIR$/MySokoban FX/src/mysokoban/fx/MySokobanFX.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="915">
-          <caret line="79" column="56" selection-start-line="79" selection-start-column="56" selection-end-line="79" selection-end-column="56" />
+          <caret line="97" column="56" selection-start-line="97" selection-start-column="56" selection-end-line="97" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MySokoban FX/src/output/Display.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
