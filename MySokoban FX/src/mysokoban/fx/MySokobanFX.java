@@ -18,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import mysokoban.fx.core.Level;
 import mysokoban.fx.output.ConsoleOutput;
+import mysokoban.fx.testgoal.TestGoal;
 
 import javax.swing.JApplet;
 import javax.swing.JFrame;
@@ -66,9 +67,11 @@ public class MySokobanFX extends JApplet {
 
                 Level lvl1 = new Level();
 
-                lvl1.loadLevel("C:\\Users\\RC\\Documents\\jojo-roro\\MySokoban FX\\src\\ressource\\map_01");
+                lvl1.loadLevel("C:\\Users\\RC\\Documents\\jojo-roro\\MySokoban FX\\src\\ressource\\map_01 ");
                 new ConsoleOutput().ConsoleMapDispay(lvl1);
-
+                if(!TestGoal.test(lvl1)){
+                    System.out.println("la partie n'est pas finit");
+                }
 
 
 
@@ -84,7 +87,6 @@ public class MySokobanFX extends JApplet {
         add(fxContainer, BorderLayout.CENTER);
         // create JavaFX scene
         Platform.runLater(new Runnable() {
-            
             @Override
             public void run() {
                 createScene();

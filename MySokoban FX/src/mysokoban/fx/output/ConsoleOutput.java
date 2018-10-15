@@ -21,17 +21,22 @@ public class ConsoleOutput {
             for (int j = 0; j < 19; j++) {
                 //System.out.print(level.getMapLevel()[i][j] + " ");
                 if(level.getMapLevel()[i][j] == 1)
-                    System.out.print(ANSI_RED + "# "+ ANSI_RESET);
+                    System.out.print(ANSI_RED + "1 "+ ANSI_RESET);
                 else if(level.getMapLevel()[i][j] == 2)
                     System.out.print(ANSI_BLUE + "2 "+ ANSI_RESET);
                 else if(level.getMapLevel()[i][j] == 5)
                     System.out.print(ANSI_PURPLE + "5 "+ ANSI_RESET);
-                else if(level.getMapLevel()[i][j] == 2)
-                    System.out.print(ANSI_GREEN + "4 "+ ANSI_RESET);
                 else System.out.print(level.getMapLevel()[i][j] + " ");
             }
             System.out.println();
-
+// ajout de black list et distance
         }
+
+        System.out.println("Voila les coord des cases goals");
+        for (int i = 0; i < level.goalCoord.size(); i++) {
+            System.out.println(level.goalCoord.get(i));
+        }
+        System.out.println(level.goalCoord.size());
+
     }
 }
