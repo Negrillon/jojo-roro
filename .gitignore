@@ -1,6 +1,7 @@
-/MySokoban FX/nbproject/private/
-/MySokoban FX/build/
-/MySokoban FX/dist/
+MySokoban FX/nbproject/private/
+MySokoban FX/build/
+MySokoban FX/dist/
 .idea/
 out/
+*/.idea/*
 *.iml
