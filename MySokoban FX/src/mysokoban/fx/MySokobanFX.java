@@ -15,7 +15,9 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.StackPane;
+import mysokoban.fx.core.Deplacement;
 import mysokoban.fx.core.Level;
 import mysokoban.fx.output.ConsoleOutput;
 import mysokoban.fx.testgoal.TestGoal;
@@ -34,6 +36,9 @@ public class MySokobanFX extends JApplet {
     private static final int JFXPANEL_WIDTH_INT = 300;
     private static final int JFXPANEL_HEIGHT_INT = 250;
     private static JFXPanel fxContainer;
+
+    private static Level lvl;
+
 
     /**
      * @param args the command line arguments
@@ -65,14 +70,12 @@ public class MySokobanFX extends JApplet {
 
                 //Test affichage level
 
-                Level lvl1 = new Level();
+                lvl = new Level();
 
-                lvl1.loadLevel("C:\\Users\\RC\\Documents\\jojo-roro\\MySokoban FX\\src\\ressource\\map_01 ");
-                new ConsoleOutput().ConsoleMapDispay(lvl1);
-                if(!TestGoal.test(lvl1)){
-                    System.out.println("la partie n'est pas finit");
-                }
+                lvl.loadLevel("C:\\Users\\RC\\Documents\\jojo-roro\\MySokoban FX\\src\\ressource\\map\\map_01 ");
 
+
+                ConsoleOutput.ConsoleMapDispay(lvl);
 
 
 
@@ -107,6 +110,20 @@ public class MySokobanFX extends JApplet {
         StackPane root = new StackPane();
         root.getChildren().add(btn);
         fxContainer.setScene(new Scene(root));
+
+        btn.setOnKeyPressed(e -> {
+            lvl = new Deplacement(lvl).keypressed(e.getCode());
+
+            ConsoleOutput.ConsoleMapDispay(lvl);
+
+            if(!TestGoal.test(lvl)){
+                System.out.println("la partie n'est pas finit");
+            }else{
+                System.out.println("gagné");
+            }
+        });
     }
+
+
     
 }

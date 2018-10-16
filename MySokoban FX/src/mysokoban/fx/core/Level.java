@@ -12,10 +12,14 @@ import static java.lang.Integer.toBinaryString;
 //La class Level contient la majorité des element du jeu : la map sous forme de tableau d'entier, les coordonnées des cases goal
 //
 public class Level {
-
+    //Map
     public int[][] mapLevel;
 
+    //Coordonné du player ( id 5 sur la map )
+    public Coord_x_y playerCoord;
 
+
+    //list des Coord Goal
     public List<Coord_x_y> goalCoord = new ArrayList<Coord_x_y>();
 
 
@@ -77,6 +81,9 @@ public class Level {
                     goalCoord.add(k,new Coord_x_y(i,j));
                     k++;
                     mapLevel[i][j] = 0;
+                }
+                if(mapLevel[i][j] == 5){
+                    playerCoord = new Coord_x_y(i,j);
                 }
             }
         }
