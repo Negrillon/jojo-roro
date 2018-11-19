@@ -36,7 +36,10 @@ public class ConsoleOutput {
                     System.out.print(ANSI_PURPLE + "5 "+ ANSI_RESET);
                 else if(cachemap[i][j] == 4)
                     System.out.print(ANSI_GREEN + "4 "+ ANSI_RESET);
-                else System.out.print(cachemap[i][j] + " ");
+                else{
+                    //System.out.print(cachemap[i][j] + " ");
+                    System.out.print(ANSI_WHITE + "  "+ ANSI_RESET);
+                }
             }
             System.out.println();
 
