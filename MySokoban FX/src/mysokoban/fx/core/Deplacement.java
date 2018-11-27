@@ -3,6 +3,7 @@ package mysokoban.fx.core;
 import com.sun.java.accessibility.util.TopLevelWindowMulticaster;
 import javafx.scene.input.KeyCode;
 import mysokoban.fx.MySokobanFX;
+import mysokoban.fx.output.Frame;
 
 //Class qui gere le deplacement
 public class Deplacement {
@@ -41,14 +42,13 @@ public class Deplacement {
             }
 
 
-
         }
         return lvl;
     }
 
     //Procedure qui gerent le deplacement cas par cas --> amelioration possible en refactor avec un objet direction
 
-    private void move(){
+    public void move(){
 
         if((lvl.getMapLevel()[lvl.playerCoord.getX()+directionX][lvl.playerCoord.getY()+directionY] != 1) && (lvl.getMapLevel()[lvl.playerCoord.getX()+directionX][lvl.playerCoord.getY()+directionY] != 2)){
 

@@ -80,7 +80,7 @@ public class Level {
                 if(mapLevel[i][j] == 4){
                     goalCoord.add(k,new Coord_x_y(i,j));
                     k++;
-                    mapLevel[i][j] = 0;
+                    //mapLevel[i][j] = 0;
                 }
                 if(mapLevel[i][j] == 5){
                     playerCoord = new Coord_x_y(i,j);

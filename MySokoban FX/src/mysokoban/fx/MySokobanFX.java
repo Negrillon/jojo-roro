@@ -8,6 +8,7 @@ package mysokoban.fx;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.io.*;
+import java.util.Scanner;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -20,6 +21,8 @@ import javafx.scene.layout.StackPane;
 import mysokoban.fx.core.Deplacement;
 import mysokoban.fx.core.Level;
 import mysokoban.fx.output.ConsoleOutput;
+import mysokoban.fx.output.Frame;
+import mysokoban.fx.output.FrameMenu;
 import mysokoban.fx.testgoal.TestGoal;
 
 import javax.swing.JApplet;
@@ -38,6 +41,7 @@ public class MySokobanFX extends JApplet {
     private static JFXPanel fxContainer;
 
     private static Level lvl;
+    private static Frame frame1;
 
 
     /**
@@ -72,11 +76,24 @@ public class MySokobanFX extends JApplet {
 
                 lvl = new Level();
 
-                lvl.loadLevel("C:\\Users\\RC\\Documents\\jojo-roro\\MySokoban FX\\src\\ressource\\map\\map_01 ");
+                lvl.loadLevel("/Users/joris/Document/Projet ING3/jojo-roro/MySokoban FX/src/ressource/map/map_01");
+
+                System.out.println("Pressez la touche 1 pour jouer en mode console \r");
+                System.out.println("Pressez la touche 2 pour jouer en mode graphique \r");
+
+                Scanner choiceMode = new Scanner(System.in);
+                String resultChoiceMode = choiceMode.nextLine();
 
 
-                ConsoleOutput.ConsoleMapDispay(lvl);
+                //FrameMenu frameMenu = new FrameMenu();
 
+                if (resultChoiceMode.equals("1")){
+                    System.out.println("1");
+                    ConsoleOutput.ConsoleMapDispay(lvl);
+                }else if (resultChoiceMode.equals("2")){
+                    System.out.println("2");
+                    frame1 = new Frame("Graphique",lvl);
+                }
 
 
             }
@@ -97,7 +114,7 @@ public class MySokobanFX extends JApplet {
         });
     }
     
-    private void createScene() {
+    /*private void createScene() {
         Button btn = new Button();
         btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
@@ -115,6 +132,37 @@ public class MySokobanFX extends JApplet {
             lvl = new Deplacement(lvl).keypressed(e.getCode());
 
             ConsoleOutput.ConsoleMapDispay(lvl);
+            frame1.refresh();
+
+            if(!TestGoal.test(lvl)){
+                System.out.println("la partie n'est pas finit");
+            }else{
+                System.out.println("gagné");
+            }
+        });
+    }*/
+
+    private void createScene() {
+        Button btn = new Button();
+        btn.setText("Say 'Hello World'");
+        btn.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Hello World!");
+            }
+        });
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
+        fxContainer.setScene(new Scene(root));
+
+        //frame1.addKeyListener();
+
+        btn.setOnKeyPressed(e -> {
+            lvl = new Deplacement(lvl).keypressed(e.getCode());
+
+            ConsoleOutput.ConsoleMapDispay(lvl);
+            frame1.refresh(lvl);
 
             if(!TestGoal.test(lvl)){
                 System.out.println("la partie n'est pas finit");
